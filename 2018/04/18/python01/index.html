@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>notebook01 | Natalia&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##argparse&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;argparse 是 Python 内置的一个用于命令项选项与参数解析的模块，通过在程序中定义好我们需要的参数，argparse 将会从 sys.argv 中解析出这些参数，并自动生成帮助和使用信息。当然，Python 也有第三方的库可用于命令行解析，而且功能也更加强大，比如 docopt，Cl">
+  <meta name="description" content="argparse&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;argparse 是 Python 内置的一个用于命令项选项与参数解析的模块，通过在程序中定义好我们需要的参数，argparse 将会从 sys.argv 中解析出这些参数，并自动生成帮助和使用信息。当然，Python 也有第三方的库可用于命令行解析，而且功能也更加强大，比如 docopt，Clic">
 <meta property="og:type" content="article">
 <meta property="og:title" content="notebook01">
 <meta property="og:url" content="http://yoursite.com/2018/04/18/python01/index.html">
 <meta property="og:site_name" content="Natalia&#39;s blog">
-<meta property="og:description" content="##argparse&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;argparse 是 Python 内置的一个用于命令项选项与参数解析的模块，通过在程序中定义好我们需要的参数，argparse 将会从 sys.argv 中解析出这些参数，并自动生成帮助和使用信息。当然，Python 也有第三方的库可用于命令行解析，而且功能也更加强大，比如 docopt，Cl">
-<meta property="og:updated_time" content="2018-04-19T15:36:19.783Z">
+<meta property="og:description" content="argparse&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;argparse 是 Python 内置的一个用于命令项选项与参数解析的模块，通过在程序中定义好我们需要的参数，argparse 将会从 sys.argv 中解析出这些参数，并自动生成帮助和使用信息。当然，Python 也有第三方的库可用于命令行解析，而且功能也更加强大，比如 docopt，Clic">
+<meta property="og:updated_time" content="2018-04-19T15:43:03.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="notebook01">
-<meta name="twitter:description" content="##argparse&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;argparse 是 Python 内置的一个用于命令项选项与参数解析的模块，通过在程序中定义好我们需要的参数，argparse 将会从 sys.argv 中解析出这些参数，并自动生成帮助和使用信息。当然，Python 也有第三方的库可用于命令行解析，而且功能也更加强大，比如 docopt，Cl">
+<meta name="twitter:description" content="argparse&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;argparse 是 Python 内置的一个用于命令项选项与参数解析的模块，通过在程序中定义好我们需要的参数，argparse 将会从 sys.argv 中解析出这些参数，并自动生成帮助和使用信息。当然，Python 也有第三方的库可用于命令行解析，而且功能也更加强大，比如 docopt，Clic">
   
     <link rel="alternative" href="/atom.xml" title="Natalia&#39;s blog" type="application/atom+xml">
   
@@ -155,12 +155,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##argparse<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;argparse 是 Python 内置的一个用于命令项选项与参数解析的模块，通过在程序中定义好我们需要的参数，argparse 将会从 sys.argv 中解析出这些参数，并自动生成帮助和使用信息。当然，Python 也有第三方的库可用于命令行解析，而且功能也更加强大，比如 docopt，Click。<a id="more"></a>  </p>
-<p>###主要有三个步骤:<br>创建 ArgumentParser() 对象<br>调用 add_argument() 方法添加参数<br>使用 parse_args() 解析添加的参数  </p>
+        <h2 id="argparse"><a href="#argparse" class="headerlink" title="argparse"></a>argparse</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;argparse 是 Python 内置的一个用于命令项选项与参数解析的模块，通过在程序中定义好我们需要的参数，argparse 将会从 sys.argv 中解析出这些参数，并自动生成帮助和使用信息。当然，Python 也有第三方的库可用于命令行解析，而且功能也更加强大，比如 docopt，Click。<a id="more"></a>  </p>
+<h3 id="主要有三个步骤"><a href="#主要有三个步骤" class="headerlink" title="主要有三个步骤:"></a>主要有三个步骤:</h3><p>创建 ArgumentParser() 对象<br>调用 add_argument() 方法添加参数<br>使用 parse_args() 解析添加的参数  </p>
 <p>定位参数和选项参数可以混合使用，看下面一个例子，给一个整数序列，输出它们的和或最大值（默认）：<br><code>import argparse</code><br><code>parser = argparse.ArgumentParser(description=&#39;Process some integers.&#39;)</code><br><code>parser.add_argument(&#39;integers&#39;, metavar=&#39;N&#39;, type=int, nargs=&#39;+&#39;,
                    help=&#39;an integer for the accumulator&#39;)</code><br><code>parser.add_argument(&#39;--sum&#39;, dest=&#39;accumulate&#39;, action=&#39;store_const&#39;,
-                   const=sum, default=max,
-                   help=&#39;sum the integers (default: find the max)&#39;)</code><br><code>args = parser.parse_args()</code><br><code>print args.accumulate(args.integers)</code>  </p>
+                   const=sum, default=max,</code><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>help=&#39;sum the integers (default: find the max)&#39;)</code><br><code>args = parser.parse_args()</code><br><code>print args.accumulate(args.integers)</code>  </p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当调用parse_args()时，就会返回两个属性，integers 和accumulater 属性, integers 属性接受 一个数字或者是多个数字，而accumulater属性可以接受一个 –sum选项，当命令行中带有 –sum选项以后，它代表的是系统的sum()函数的功能，若不带–sum选项，就是代表max()函数功能。  </p>
 <p>每个参数解释如下:<br>name or flags - 选项字符串的名字或者列表，例如 foo 或者 -f, –foo。<br>action - 命令行遇到参数时的动作，默认值是 store。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;store_const，表示赋值为const；<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;append，将遇到的值存储成列表，也就是如果参数重复则会保存多个值;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;append_const，将参数规范中定义的一个值保存到一个列表；<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count，存储遇到的次数；此外，也可以继承 argparse.Action 自定义参数解析；<br>nargs - 应该读取的命令行参数个数，可以是具体的数字，或者是?号，当不指定值时对于 Positional argument 使用 default，对于 Optional argument 使用 const；或者是 * 号，表示 0 或多个参数；或者是 + 号表示 1 或多个参数。<br>const - action 和 nargs 所需要的常量值。<br>default - 不指定参数时的默认值。<br>type - 命令行参数应该被转换成的类型。<br>choices - 参数可允许的值的一个容器。<br>required - 可选参数是否可以省略 (仅针对可选参数)。<br>help - 参数的帮助信息，当指定为 argparse.SUPPRESS 时表示不显示该参数的帮助信息.<br>metavar - 在 usage 说明中的参数名称，对于必选参数默认就是参数名称，对于可选参数默认是全大写的参数名称.<br>dest - 解析后的参数名称，默认情况下，对于可选参数选取最长的名称，中划线转换为下划线.</p>
 
