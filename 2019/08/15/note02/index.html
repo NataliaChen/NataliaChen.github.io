@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>笔记 | Natalia&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##Linux配置 ###网络  开机启动网络以及测试网络 vi /etc/sysconfig/network-scripts/ifcfg-ens33 设置ONBOOT=yes 重启网络：systemctl restart network 测试网络：ping 8.8.8.8">
+  <meta name="description" content="Linux配置网络 开机启动网络以及测试网络 vi /etc/sysconfig/network-scripts/ifcfg-ens33 设置ONBOOT=yes 重启网络：systemctl restart network 测试网络：ping 8.8.8.8">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记">
 <meta property="og:url" content="http://yoursite.com/2019/08/15/note02/index.html">
 <meta property="og:site_name" content="Natalia&#39;s blog">
-<meta property="og:description" content="##Linux配置 ###网络  开机启动网络以及测试网络 vi /etc/sysconfig/network-scripts/ifcfg-ens33 设置ONBOOT=yes 重启网络：systemctl restart network 测试网络：ping 8.8.8.8">
-<meta property="og:updated_time" content="2019-08-15T13:13:35.038Z">
+<meta property="og:description" content="Linux配置网络 开机启动网络以及测试网络 vi /etc/sysconfig/network-scripts/ifcfg-ens33 设置ONBOOT=yes 重启网络：systemctl restart network 测试网络：ping 8.8.8.8">
+<meta property="og:updated_time" content="2019-08-21T13:40:55.890Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记">
-<meta name="twitter:description" content="##Linux配置 ###网络  开机启动网络以及测试网络 vi /etc/sysconfig/network-scripts/ifcfg-ens33 设置ONBOOT=yes 重启网络：systemctl restart network 测试网络：ping 8.8.8.8">
+<meta name="twitter:description" content="Linux配置网络 开机启动网络以及测试网络 vi /etc/sysconfig/network-scripts/ifcfg-ens33 设置ONBOOT=yes 重启网络：systemctl restart network 测试网络：ping 8.8.8.8">
   
     <link rel="alternative" href="/atom.xml" title="Natalia&#39;s blog" type="application/atom+xml">
   
@@ -155,9 +155,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##Linux配置</p>
-<p>###网络</p>
-<ul>
+        <h2 id="Linux配置"><a href="#Linux配置" class="headerlink" title="Linux配置"></a>Linux配置</h2><h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><ul>
 <li>开机启动网络以及测试网络<ol>
 <li><code>vi /etc/sysconfig/network-scripts/ifcfg-ens33</code></li>
 <li>设置<code>ONBOOT=yes</code></li>
@@ -180,8 +178,7 @@
 </ol>
 </li>
 </ul>
-<p>###远程登录</p>
-<ul>
+<h3 id="远程登录"><a href="#远程登录" class="headerlink" title="远程登录"></a>远程登录</h3><ul>
 <li><p>在Linux端开启远程登录</p>
 <ol>
 <li>安装ssh：<code>yum install -y openssl openssh-server</code></li>
@@ -197,8 +194,7 @@
 </ul>
 </li>
 </ul>
-<p>###Yum</p>
-<ul>
+<h3 id="Yum"><a href="#Yum" class="headerlink" title="Yum"></a>Yum</h3><ul>
 <li><p>更换公司内部Yum源</p>
 <ol>
 <li>备份默认Yum源并创建新的repo文件：<code>mkdir /etc/yum.repos.d/back &amp;&amp; mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/back/ &amp;&amp; vi /etc/yum.repos.d/CentOS-7.repo</code></li>
@@ -226,17 +222,14 @@
 <li>查看某个软件是否安装：<code>yum list installed | grep [软件名]</code></li>
 <li>搜索软件：<code>yum search [软件名]</code></li>
 </ul>
-<p>###基础工具包的安装</p>
-<ul>
+<h3 id="基础工具包的安装"><a href="#基础工具包的安装" class="headerlink" title="基础工具包的安装"></a>基础工具包的安装</h3><ul>
 <li>wget：<code>yum install wget -y</code></li>
 <li>git：<code>yum install git -y</code></li>
 </ul>
-<p>###wget的使用</p>
-<ul>
+<h3 id="wget的使用"><a href="#wget的使用" class="headerlink" title="wget的使用"></a>wget的使用</h3><ul>
 <li>下载文件：<code>wget [要下载文件的地址]</code></li>
 </ul>
-<p>###安装并配置Java</p>
-<ol>
+<h3 id="安装并配置Java"><a href="#安装并配置Java" class="headerlink" title="安装并配置Java"></a>安装并配置Java</h3><ol>
 <li>从公司gitlab下载java并解压：<code>cd /opt/ &amp;&amp; wget http://10.10.10.21/DevelopmentCenter/tools/raw/master/java/jdk-8u211-linux-x64.tar.gz &amp;&amp; tar -zxvf jdk-8u211-linux-x64.tar.gz</code></li>
 <li><p>配置环境变量：<code>vi /etc/profile</code>，在该文件中加入下面两行</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/opt/jdk1.8.0_221</span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
@@ -244,8 +237,7 @@
 <li><p>应用配置文件：<code>source /etc/profile</code>（重新执行profile文件中的shell）</p>
 </li>
 </ol>
-<p>###安装并配置Maven</p>
-<ol>
+<h3 id="安装并配置Maven"><a href="#安装并配置Maven" class="headerlink" title="安装并配置Maven"></a>安装并配置Maven</h3><ol>
 <li>从公司gitlab下载maven并解压：<code>cd /opt/ &amp;&amp; wget http://10.10.10.21/DevelopmentCenter/tools/raw/master/maven/apache-maven-3.6.1-bin.tar.gz &amp;&amp; tar -zxvf apache-maven-3.6.1-bin.tar.gz</code></li>
 <li><p>配置环境变量：<code>vi /etc/profile</code>，在该文件中加入下面两行</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export MAVEN_HOME=/opt/apache-maven-3.6.1</span><br><span class="line">export PATH=$&#123;MAVEN_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
@@ -253,8 +245,7 @@
 <li><p>应用配置文件：<code>source /etc/profile</code></p>
 </li>
 </ol>
-<p>###安装并配置Docker</p>
-<ol>
+<h3 id="安装并配置Docker"><a href="#安装并配置Docker" class="headerlink" title="安装并配置Docker"></a>安装并配置Docker</h3><ol>
 <li>通过yum安装docker：<code>yum install docker -y</code></li>
 <li><p>添加本地镜像库：<code>vi /etc/docker/daemon.json</code>，加入以下内容</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;registry-mirrors&quot;:</span><br><span class="line">		[</span><br><span class="line">			&quot;http://10.10.10.22:5000&quot;,</span><br><span class="line">			&quot;http://10.10.10.45&quot;</span><br><span class="line">		],</span><br><span class="line">	&quot;insecure-registries&quot;:</span><br><span class="line">		[</span><br><span class="line">			&quot;10.10.10.22:5000&quot;,</span><br><span class="line">			&quot;10.10.10.45&quot;		</span><br><span class="line">		]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -266,8 +257,7 @@
 <ul>
 <li>重启docker：<code>systemctl restart docker</code></li>
 </ul>
-<p>###安装、启动并配置Jenkins</p>
-<ol>
+<h3 id="安装、启动并配置Jenkins"><a href="#安装、启动并配置Jenkins" class="headerlink" title="安装、启动并配置Jenkins"></a>安装、启动并配置Jenkins</h3><ol>
 <li>从公司gitlab下载Jenkins并创建工作目录：<code>cd /opt/ &amp;&amp; wget http://10.10.10.21/DevelopmentCenter/tools/raw/master/jenkins/jenkins.war &amp;&amp; mkdir /opt/jenkins</code></li>
 <li>启动Jenkins：<code>java -jar -XX:PermSize=512M -XX:MaxPermSize=1024M -Xmn128M -Xms512M -Xmx1024M jenkins.war --httpPort=80 --webroot=/opt/jenkins &amp;</code><ul>
 <li>查询初始admin密码：<code>cat /root/.jenkins/secrets/initialAdminPassword</code></li>
@@ -276,8 +266,7 @@
 <li>选择安装默认插件</li>
 <li>在”系统管理“（Manage Jenkins）-&gt;”全局工具配置“（Global Tool Configuration）中配置JDK与Maven路径（与运行Jenkins服务的服务器中的路径一致）</li>
 </ol>
-<p>###常用命令</p>
-<ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
 <li>查看磁盘使用情况：<code>df -hl</code></li>
 <li>内存使用情况：<code>free -hl</code></li>
 <li>IP地址查看：<code>ifconfig</code></li>
@@ -293,16 +282,14 @@
 <li>移动文件：<code>mv [要移动的文件(夹)名或路径] [目的路径]</code></li>
 <li>查看目录文件占用空间：<code>du -ah --max-depth=1</code></li>
 </ul>
-<p>###设置免密登录</p>
-<ul>
+<h3 id="设置免密登录"><a href="#设置免密登录" class="headerlink" title="设置免密登录"></a>设置免密登录</h3><ul>
 <li>假设试图远程登录的机器为A机，被登录的机器为B机</li>
 </ul>
 <ol>
 <li>在A机生成秘钥：    <code>ssh-keygen -t rsa</code></li>
 <li>复制公钥到B机：<code>ssh-copy-id [B机IP]</code></li>
 </ol>
-<p>##Git的使用</p>
-<ul>
+<h2 id="Git的使用"><a href="#Git的使用" class="headerlink" title="Git的使用"></a>Git的使用</h2><ul>
 <li>使用Git前的配置<ol>
 <li>设置用户名：<code>git config --global user.name &quot;[用户名]&quot;</code></li>
 <li>设置邮箱：<code>git config --global user.email 邮箱</code></li>
@@ -315,18 +302,15 @@
 <li>提交更新：git commit -m “[提交内容说明]”</li>
 <li>同步本地仓库与云端仓库（提交到云端）：git push</li>
 </ul>
-<p>##Java运行Jar程序</p>
-<ul>
+<h2 id="Java运行Jar程序"><a href="#Java运行Jar程序" class="headerlink" title="Java运行Jar程序"></a>Java运行Jar程序</h2><ul>
 <li><code>java -jar [jar/war包名称或路径] --httpPort=[指定端口] --webroot=[指定工作目录] &amp;</code></li>
 </ul>
-<p>##Maven的使用</p>
-<ul>
+<h2 id="Maven的使用"><a href="#Maven的使用" class="headerlink" title="Maven的使用"></a>Maven的使用</h2><ul>
 <li>编译项目：<code>mvn compile</code>（将src/main/java下的文件编译为class文件输出到target目录下）</li>
 <li>清理工程：<code>mvn clean</code>（删除target目录的内容）</li>
 <li>打包工程：<code>mvn package</code>(java工程打成jar包，web工程打成war包)</li>
 </ul>
-<p>##Harbor+Docker的使用</p>
-<ul>
+<h2 id="Harbor-Docker的使用"><a href="#Harbor-Docker的使用" class="headerlink" title="Harbor+Docker的使用"></a>Harbor+Docker的使用</h2><ul>
 <li>使用Docker登录到Harbor：<code>docekr login -u [Harbor用户名] -p [Harbor密码]</code>，其中<code>-u</code>和<code>-p</code>参数可省略。</li>
 <li>使用Docker从Harbor登出：<code>docker logout</code></li>
 <li>使用Docker从Harbor载入镜像：<code>docker pull 10.10.10.45/[Harbor项目名]/[应用名]</code></li>
@@ -339,8 +323,7 @@
 <li>查看容器日志：<code>docker logs [容器名/容器ID]</code></li>
 <li>删除容器：<code>docker rm [容器名/容器ID]</code></li>
 </ul>
-<p>##Jenkins的使用</p>
-<ul>
+<h2 id="Jenkins的使用"><a href="#Jenkins的使用" class="headerlink" title="Jenkins的使用"></a>Jenkins的使用</h2><ul>
 <li><p>管理Maven项目并使用Docker打包上传至Harbor再在web机下载并运行</p>
 <ol>
 <li>在面板中点击”新建任务”（New Item）</li>
@@ -360,8 +343,7 @@
 10. 点击左侧栏的“控制台输出“（Console Output）查看构建进度。
 
 - 注意：Jenkins的服务器一定要具备免密登录到web机的权限。（详情请见「Linux配置-设置免密登录」）
-</code></pre><p>##功能简述部分</p>
-<ul>
+</code></pre><h2 id="功能简述部分"><a href="#功能简述部分" class="headerlink" title="功能简述部分"></a>功能简述部分</h2><ul>
 <li>yum源：修改yum源的目的是改变yum下载软件以及依赖的地址，更改为公司内部的yum源可以一定程度上提高下载速度。</li>
 <li>nexus：管理内网的资源，其中包括内网的yum源的存储、反向代理，maven的第三方依赖的存储、反向代理以及管理公司产品的jar包等。</li>
 <li>jenkins：自动化项目从打包到发布的整套过程，可以保证git上的项目与客户机上的项目的同步性。</li>
@@ -371,8 +353,7 @@
 <li>curl命令：一种命令行工具，作用是发出网络请求，然后得到和提取数据，显示在”标准输出”（stdout）上面。</li>
 <li>source命令：在当前bash环境下读取并执行指定文件中的命令。</li>
 </ul>
-<p>##常见的错误日志分析</p>
-<ol>
+<h2 id="常见的错误日志分析"><a href="#常见的错误日志分析" class="headerlink" title="常见的错误日志分析"></a>常见的错误日志分析</h2><ol>
 <li>jar包或者Jenkins重复启动或端口占用会报：<code>Address already in use.</code></li>
 <li>docker容器重复运行会报：<code>/usr/bin/docker-current: Error response from daemon: Conflict. The container name &quot;/impc&quot; is already in use by container 8eb5fbed83b7bf019d64255fa8fd893001a45f9577e3b033ae07cef740e5be35. You have to remove (or rename) that container to be able to reuse that name..</code></li>
 <li>docker连接不到<code>10.10.10.45</code>服务器（由于忘记配给docker的daemon.json文件）会报：<code>Unable to find image &#39;10.10.10.45/[Harbor项目名]/[应用名]:latest&#39; locally
