@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Natalia&#39;s blog</title>
+  <title>JMeter提取系统新增加的ID并删除 | Natalia&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Natalia&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="###1.在新建后的列表list下添加JSON提取器  Main sample only 定义任意变量 $.rows[0].projectId  (XHR的response提取到VSCode)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JMeter提取系统新增加的ID并删除">
+<meta property="og:url" content="http://yoursite.com/2019/12/01/note04/index.html">
 <meta property="og:site_name" content="Natalia&#39;s blog">
+<meta property="og:description" content="###1.在新建后的列表list下添加JSON提取器  Main sample only 定义任意变量 $.rows[0].projectId  (XHR的response提取到VSCode)">
+<meta property="og:updated_time" content="2019-12-01T11:54:19.001Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Natalia&#39;s blog">
+<meta name="twitter:title" content="JMeter提取系统新增加的ID并删除">
+<meta name="twitter:description" content="###1.在新建后的列表list下添加JSON提取器  Main sample only 定义任意变量 $.rows[0].projectId  (XHR的response提取到VSCode)">
   
     <link rel="alternative" href="/atom.xml" title="Natalia&#39;s blog" type="application/atom+xml">
   
@@ -131,33 +135,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-film01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-note04" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/04/film01/">分明是姬别霸王</a>
+    <h1 class="article-title" itemprop="name">
+      JMeter提取系统新增加的ID并删除
     </h1>
   
 
         
-        <a href="/2018/04/04/film01/" class="archive-article-date">
-  	<time datetime="2018-04-04T11:49:35.873Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-04</time>
+        <a href="/2019/12/01/note04/" class="archive-article-date">
+  	<time datetime="2019-12-01T03:28:01.320Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://m.qpic.cn/psb?/V13niFaj3cyID3/pwDsu2bJjDN9arSuC3HfYPo0rsO2IXsRYxrS8D37evg!/b/dDIBAAAAAAAA&amp;bo=AAW0AgAAAAARF5M!&amp;rf=viewer_4&amp;t=5" alt=""></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我看电影之前习惯先看一下时长，《霸王别姬》，将近三个小时，想着应该是要看几天了，但是却被故事牵动，一气呵成。心中感慨良多，不过不想评价编剧的高超技术、故事发展的交相呼应，此刻，我只想做哥哥的脑残粉。无论是扮相，身段，还是台步，沉静端庄，优雅多姿，妩媚婉柔，美艳如他。
-        
-          <a class="article-more-a" href="/2018/04/04/film01/#more">more >></a>
-        
+        <p>###1.在新建后的列表list下添加JSON提取器</p>
+<ul>
+<li>Main sample only</li>
+<li>定义任意变量</li>
+<li>$.rows[0].projectId  (XHR的response提取到VSCode)<a id="more"></a></li>
+</ul>
+<p>###2.新建http请求：删除</p>
+<ul>
+<li>方法：POST</li>
+<li>路径：开发者工具找删除的路径</li>
+<li>消息体数据： ids=${变量}</li>
+<li>新建http信息头管理器，将开发者工具中的network中的request headers粘贴进管理器</li>
+</ul>
+
       
 
       
@@ -168,16 +179,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/04/film01/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/01/note04/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/30/note03/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JMeter对web系统做压测，监测服务器性能</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -197,145 +267,14 @@
 
 
 
-
-  
-    <article id="post-birthday" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/24/birthday/">生活如是说</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/24/birthday/" class="archive-article-date">
-  	<time datetime="2018-03-24T15:41:18.172Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://m.qpic.cn/psb?/V13niFaj3cyID3/WLb*qhmPeCWn4KNXyj4*MOeawoTUOnXcTsjzbrRDtrg!/b/dEMBAAAAAAAA&amp;bo=VAY4BHAXoA8RCZg!&amp;rf=viewer_4" alt="">  </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我有个小愿望，希望自己能在被世事风蚀之后，依旧可以开一家照相馆，在有生活气的街道，阳光倾泻，对着镜头下的一点一滴傻笑，无论是绾着的青丝，还是眼角的纹路。就像一个蓝色的阿凡达，守护着潘多拉星球。
-        
-          <a class="article-more-a" href="/2018/03/24/birthday/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/24/birthday/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/22/hello-world/" class="archive-article-date">
-  	<time datetime="2018-03-22T08:41:02.500Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a>
-        
-          <a class="article-more-a" href="/2018/03/22/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/22/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -358,8 +297,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
